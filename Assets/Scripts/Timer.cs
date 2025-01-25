@@ -13,6 +13,7 @@ public class Timer: MonoBehaviour
     private float timerTime;
     public bool timeStopped = false;
     public Canvas gameOverCanvas;
+    public Canvas WinCanvas;
 
 
     private void Start()
@@ -48,10 +49,10 @@ public class Timer: MonoBehaviour
             StopTimer();
         }*/
 
-        if(Input.GetMouseButtonDown (1))
+        /*if(Input.GetMouseButtonDown (1))
         {
             ResetTimer();
-        }
+        }*/
     }
 
     void StopTimer()
