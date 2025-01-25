@@ -12,6 +12,7 @@ public class Finishline : MonoBehaviour
     {
         GameObject finish = collision.gameObject;
         Debug.Log("aangeraakt");
+        // next level 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
