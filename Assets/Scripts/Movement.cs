@@ -63,7 +63,7 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetButtonUp("Jump"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
             cyttc = 0f;
         }
         if (Input.GetButton("Dash") && Input.GetButton("Jump"))
@@ -91,7 +91,7 @@ public class Movement : MonoBehaviour
     {
         if (!iswalljumping)
         {
-            rb.velocity = new Vector2(hvel * 10, rb.velocity.y);
+            rb.linearVelocity = new Vector2(hvel * 10, rb.linearVelocity.y);
         }
         if (IsTouching(dinglayer) == true)
         {
@@ -137,11 +137,11 @@ public class Movement : MonoBehaviour
         rb.gravityScale = 0f;
         if (Input.GetAxis("Vertical") != 0)
         {
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(vvel * 4, vvel * 4, float.MaxValue));
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(vvel * 4, vvel * 4, float.MaxValue));
         }
         else if (Input.GetAxis("Vertical")  == 0)
         {
-            rb.velocity = new Vector2(0, 0);
+            rb.linearVelocity = new Vector2(0, 0);
         }
     }
     private void wallslide()
@@ -149,7 +149,7 @@ public class Movement : MonoBehaviour
         if (iswalled() && !IsTouching(dinglayer) && hvel != 0f)
         {
             iswallsliding = true;
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallslidingspeed, float.MaxValue));
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -wallslidingspeed, float.MaxValue));
         }
         else
         {
@@ -174,7 +174,7 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && walljumpingcounter > 0f)
         {
             iswalljumping = true;
-            rb.velocity = new Vector2(walljumpingdirection * walljumpingpower.x * 1.4f, walljumpingpower.y * 1.25f);
+            rb.linearVelocity = new Vector2(walljumpingdirection * walljumpingpower.x * 1.4f, walljumpingpower.y * 1.25f);
             walljumpingcounter = 0f;
              
             if (transform.localScale.x != walljumpingdirection)
@@ -206,7 +206,7 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && walljumpingcounter > 0f)
         {
             iswalljumping = true;
-            rb.velocity = new Vector2(walljumpingdirection * walljumpingpower.x, walljumpingpower.y);
+            rb.linearVelocity = new Vector2(walljumpingdirection * walljumpingpower.x, walljumpingpower.y);
             walljumpingcounter = 0f;
 
             if (transform.localScale.x != walljumpingdirection)

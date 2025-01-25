@@ -32,7 +32,7 @@ public class DashBubble : MonoBehaviour
         isDashing = true;
         float originalGravity = PlayerMovement.rb.gravityScale;
         PlayerMovement.rb.gravityScale = 0f;
-        PlayerMovement.rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        PlayerMovement.rb.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         //tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         //tr.emitting = false;
