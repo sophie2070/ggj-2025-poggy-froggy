@@ -9,12 +9,14 @@ public class StaminaBubble : MonoBehaviour
     Movement PlayerMovement;
     SpriteRenderer spriteRenderer;
     CircleCollider2D circleCollider;
+    Timer timer;
 
     private void Awake()
     {
         PlayerMovement = FindAnyObjectByType<Movement>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         circleCollider = gameObject.GetComponent<CircleCollider2D>();
+        timer = gameObject.GetComponent<Timer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

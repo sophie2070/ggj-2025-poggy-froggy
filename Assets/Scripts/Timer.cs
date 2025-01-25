@@ -43,10 +43,10 @@ public class Timer: MonoBehaviour
 
         if (timeStopped)
         {
-            StopTimer();
             bubbleAnimation.enabled = false;
             kwalAnimation.enabled = false;
             WinCanvas.enabled = true;
+            StopTimer();
         }
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);
