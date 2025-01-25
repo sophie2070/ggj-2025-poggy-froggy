@@ -34,28 +34,22 @@ public class Timer: MonoBehaviour
                 remainingTime = 0;
                 StopTimer();
                 gameOverCanvas.enabled = true;
-                Debug.Log("Game Over");
             }
+        }
+
+        if (timeStopped)
+        {
+            StopTimer();
+            WinCanvas.enabled = true;
         }
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
 
         timerText.text = String.Format("{0:00}:{1:00}", minutes, seconds);
-
-        /*if(Input.GetMouseButtonDown(0))
-        {
-            timeStopped = true;
-            StopTimer();
-        }*/
-
-        /*if(Input.GetMouseButtonDown (1))
-        {
-            ResetTimer();
-        }*/
     }
 
-    void StopTimer()
+    public void StopTimer()
     {
         if (timeStopped)
         {
