@@ -5,8 +5,6 @@ using UnityEngine;
 public class DashBubble : MonoBehaviour
 {
     Movement PlayerMovement;
-    bool canDash = true;
-    bool isDashing = false;
     int dashingTime = 1;
     int dashingPower = 5;
 
@@ -22,11 +20,11 @@ public class DashBubble : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            StartCoroutine(Dash());
+            //StartCoroutine(Dash());
         }
     }
 
-    private IEnumerator Dash()
+    /*private IEnumerator Dash()
     {
         canDash = false;
         isDashing = true;
@@ -40,5 +38,5 @@ public class DashBubble : MonoBehaviour
         isDashing = false;
         canDash = true;
         PlayerMovement.rb.gravityScale = 4f;
-    }
+    }*/
 }

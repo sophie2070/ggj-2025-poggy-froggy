@@ -26,12 +26,6 @@ public class Movement : MonoBehaviour
     private float walljumpingduration = 0.5f;
     private Vector2 walljumpingpower = new Vector2(12f, 12f);
 
-    private bool isdashing;
-    private float dashingPower = 30;
-    private float dashingTime = 0.1f;
-    private float dashingCooldown = 0.1f;
-    private int currentDashes;
-
     public bool CanAirJump = false;
 
     [SerializeField] private LayerMask walllayer;
@@ -45,10 +39,6 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        if (isdashing)
-        {
-            return;
-        }
         hvel = Input.GetAxisRaw("Horizontal");
         vvel = Input.GetAxisRaw("Vertical");
 
