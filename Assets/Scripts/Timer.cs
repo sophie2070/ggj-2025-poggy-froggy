@@ -12,6 +12,7 @@ public class Timer: MonoBehaviour
     private float stopTime;
     private float timerTime;
     public bool timeStopped = false;
+    public Canvas gameOverCanvas;
 
 
     private void Start()
@@ -30,6 +31,8 @@ public class Timer: MonoBehaviour
             else if (remainingTime <= 0)
             {
                 remainingTime = 0;
+                StopTimer();
+                gameOverCanvas.enabled = true;
                 Debug.Log("Game Over");
             }
         }
@@ -39,11 +42,11 @@ public class Timer: MonoBehaviour
 
         timerText.text = String.Format("{0:00}:{1:00}", minutes, seconds);
 
-        if(Input.GetMouseButtonDown(0))
+        /*if(Input.GetMouseButtonDown(0))
         {
             timeStopped = true;
             StopTimer();
-        }
+        }*/
 
         if(Input.GetMouseButtonDown (1))
         {
