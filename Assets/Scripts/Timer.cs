@@ -14,6 +14,8 @@ public class Timer: MonoBehaviour
     public bool timeStopped = false;
     public Canvas gameOverCanvas;
     public Canvas WinCanvas;
+    public Animator bubbleAnimation;
+    public Animator kwalAnimation;
 
 
     private void Start()
@@ -32,6 +34,8 @@ public class Timer: MonoBehaviour
             else if (remainingTime <= 0)
             {
                 remainingTime = 0;
+                bubbleAnimation.enabled = false;
+                kwalAnimation.enabled = false;
                 StopTimer();
                 gameOverCanvas.enabled = true;
             }
@@ -40,6 +44,8 @@ public class Timer: MonoBehaviour
         if (timeStopped)
         {
             StopTimer();
+            bubbleAnimation.enabled = false;
+            kwalAnimation.enabled = false;
             WinCanvas.enabled = true;
         }
 
