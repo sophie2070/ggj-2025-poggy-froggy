@@ -35,6 +35,8 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()
@@ -65,6 +67,16 @@ public class Movement : MonoBehaviour
             wallclimbing();
         }
         if (Input.GetKeyUp(KeyCode.E) && iswalled() || Input.GetKey(KeyCode.E) && !iswalled())
+        {
+            rb.gravityScale = 3f;
+            isclimbing = false;
+        }
+
+        if (Input.GetButton("Climb") && iswalled())
+        {
+            wallclimbing();
+        }
+        if (Input.GetButtonUp("Climb") && iswalled() || Input.GetButton("Climb") && !iswalled())
         {
             rb.gravityScale = 3f;
             isclimbing = false;
