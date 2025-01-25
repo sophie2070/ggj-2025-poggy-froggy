@@ -163,6 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 156297980}
   - component: {fileID: 156297981}
+  - component: {fileID: 156297982}
   m_Layer: 0
   m_Name: ResetManager
   m_TagString: Untagged
@@ -186,6 +187,18 @@ Transform:
   m_Father: {fileID: 380103764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &156297981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156297979}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f98d0502a5ac1fe4baa82b3ff1057f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &156297982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -579,7 +592,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 156297981}
+      - m_Target: {fileID: 156297982}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -639,6 +652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 449575746}
   - component: {fileID: 449575747}
+  - component: {fileID: 449575748}
   m_Layer: 0
   m_Name: ResetManager
   m_TagString: Untagged
@@ -662,6 +676,18 @@ Transform:
   m_Father: {fileID: 656091514}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &449575747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449575745}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f98d0502a5ac1fe4baa82b3ff1057f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &449575748
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -860,7 +886,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 449575747}
+      - m_Target: {fileID: 449575748}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -1144,7 +1170,8 @@ GameObject:
   - component: {fileID: 934448357}
   - component: {fileID: 934448356}
   - component: {fileID: 934448355}
-  - component: {fileID: 934448358}
+  - component: {fileID: 934448359}
+  - component: {fileID: 934448360}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Finish
@@ -1268,7 +1295,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &934448358
+--- !u!114 &934448359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934448354}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e9b34d3c059ee41827854cc7bfb64a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finish: {fileID: 934448354}
+  timer: {fileID: 0}
+--- !u!114 &934448360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2191,7 +2232,8 @@ GameObject:
   - component: {fileID: 1881996188}
   - component: {fileID: 1881996187}
   - component: {fileID: 1881996186}
-  - component: {fileID: 1881996185}
+  - component: {fileID: 1881996190}
+  - component: {fileID: 1881996191}
   m_Layer: 5
   m_Name: TimerCanvas
   m_TagString: Untagged
@@ -2199,26 +2241,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1881996185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1881996184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dde3d25d0341604a9ce6a18b1dfe21a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 2110290859}
-  startTime: 150
-  remainingTime: 150
-  timeStopped: 0
-  gameOverCanvas: {fileID: 627030440}
-  WinCanvas: {fileID: 1171088841}
-  bubbleAnimation: {fileID: 1325326849}
-  kwalAnimation: {fileID: 1028876080}
 --- !u!114 &1881996186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2304,6 +2326,48 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1881996190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881996184}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc171f060efbd8a4187ca788a18e5eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 2110290859}
+  startTime: 150
+  remainingTime: 150
+  stopTime: 0
+  timerTime: 0
+  timeStopped: 0
+  gameOverCanvas: {fileID: 627030440}
+  WinCanvas: {fileID: 1171088841}
+  bubbleAnimation: {fileID: 1325326849}
+  kwalAnimation: {fileID: 1028876080}
+--- !u!114 &1881996191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881996184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dde3d25d0341604a9ce6a18b1dfe21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 2110290859}
+  startTime: 150
+  remainingTime: 150
+  timeStopped: 0
+  gameOverCanvas: {fileID: 627030440}
+  WinCanvas: {fileID: 1171088841}
+  bubbleAnimation: {fileID: 1325326849}
+  kwalAnimation: {fileID: 1028876080}
 --- !u!1 &2101883246
 GameObject:
   m_ObjectHideFlags: 0
