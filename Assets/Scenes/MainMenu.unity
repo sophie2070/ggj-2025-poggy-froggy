@@ -356,7 +356,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312754181}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -1701,15 +1701,18 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Space/ A to jump
 
-    E/ B to superjump when on a wall
+    Left Shift/ B to superjump when on a wall
 
-    Pink bubbles
-    give you an extra jump
+    Hold
+    E/ R2 to climb walls
 
-    Jellyfish are bouncy and can help you to get to higher
-    ground
+    Pink bubbles give you an extra jump
 
-    Get to the top within the timelimit to win!'
+    Jellyfish
+    are bouncy and can help you to get to higher ground
+
+    Get to the top within
+    the timelimit to win!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98a4a0264c75367429ddd26f3fc379cc, type: 2}
   m_sharedMaterial: {fileID: 3268138407010181640, guid: 98a4a0264c75367429ddd26f3fc379cc, type: 2}
@@ -1774,7 +1777,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -75.80414, y: 0, z: -671.84814, w: -110.86145}
+  m_margin: {x: -75.80414, y: 0, z: -671.84814, w: -130.48361}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1869,7 +1872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120}
+  m_AnchoredPosition: {x: 0, y: -160}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2018238197
@@ -2068,7 +2071,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044220629}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
